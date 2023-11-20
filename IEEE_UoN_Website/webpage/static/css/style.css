@@ -450,6 +450,11 @@ h6 {
   font-size: 24px;
 }
 
+.h2-header{
+  text-align: center;
+  padding-top: 50px;
+}
+
 @media (max-width: 768px) {
   #hero h2 {
     font-size: 18px;
@@ -1021,8 +1026,9 @@ section {
 /* Team Section
 --------------------------------*/
 #team {
-  background: #fff;
+  background: #D5FFD0;
   padding: 80px 0 60px 0;
+  border-radius: 100px;
 }
 
 #team .member {
@@ -1034,6 +1040,7 @@ section {
   margin-bottom: 15px;
   overflow: hidden;
   height: 260px;
+  border-radius: 30px;
 }
 
 #team .member .pic img {
@@ -1071,7 +1078,7 @@ section {
 
 /* Contact Section
 --------------------------------*/
-#contact {
+/*#contact {
   background: #f7f7f7;
   padding: 80px 0 40px 0;
 }
@@ -1204,25 +1211,75 @@ section {
   100% {
     transform: rotate(360deg);
   }
+}*/
+
+.contact{
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    background: #0C356A;
+    border-bottom: #D5FFD0 1px solid;
+    border-top: #D5FFD0 1px solid;
+}
+
+.send_message {
+    border: 1px solid #D5FFD0;
+    border-radius: 12px;
+    padding: 20px 20px 20px 20px;
+    height: auto;
+}
+
+.form-control{
+    width: 100%;
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1;
+    color: #D5FFD0;
+    background-color: #222227;
+    background-clip: padding-box;
+    border: 1px solid #D5FFD0;
+    border-radius: 12px;
+    transition: border-color .15s ease-in-out,
+                box-shadow .15s ease-in-out;
+    height: 50px;
+}
+
+.form-control:focus{
+    background-color: transparent;
+    color: #D5FFD0;
+}
+
+textarea.form-control{
+    height: 150px;
+}
+
+input.number{
+    margin-top: 20px;
+}
+
+iframe{
+    background-color: #010517;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: #010517;
+    border-style: solid;
+  align-items: inherit;
+}
+.form-control::placeholder{
+    color: whitesmoke;
 }
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #343b40;
-  padding: 30px 0;
-  color: #fff;
+  background: #D5FFD0;
+  padding: 1px 0;
+  color: #0C356A;
   font-size: 14px;
 }
 
 #footer .copyright {
   text-align: center;
-}
-
-#footer .credits {
-  padding-top: 10px;
-  text-align: center;
-  font-size: 13px;
-  color: #ccc;
+  margin-top: -5px;
 }

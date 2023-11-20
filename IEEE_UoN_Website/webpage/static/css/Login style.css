@@ -6,8 +6,17 @@ body{
 	align-items: center;
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
-	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
 }
+.bg-image{
+	background-image: url("../media/login_modal/IMG_4440.JPG");
+	filter: blur(10px);
+	--webkit-filter: blur(10px);
+	height: 100%;
+	background-position: 50% 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .main{
 	width: 350px;
 	height: 500px;
