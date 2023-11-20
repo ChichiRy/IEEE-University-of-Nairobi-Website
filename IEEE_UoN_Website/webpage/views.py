@@ -45,3 +45,19 @@ def home_exec(request):
 
 def log_out(request):
     return render(request, 'log_out.html')
+
+
+def password(request):
+    return render(request, 'admin/password.html')
+
+
+def register(request):
+    return render(request, 'admin/register.html')
+
+
+def index_admin(request):
+    return render(request, 'admin/index.html')
+
+
+def single_post(request):
+    return render(request, 'single-post.html')

@@ -478,6 +478,72 @@ h6 {
   border: 2px solid #2dc997;
 }
 
+.btn.btn-style2{
+    background: linear-gradient(to left, transparent 50%, white 50%)
+                right bottom;
+    background-size: 200% 100%;
+    padding: 0 15px 0 15px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    font-size: 15px;
+    letter-spacing: -.025em;
+    line-height: 43px;
+    height: 45px;
+    transition: all .3s cubic-bezier(.4,0,.2,1);
+    -webkit-transition: .3s cubic-bezier(.4,0,.2,1);
+    min-width: 150px;
+    position: relative;
+}
+
+.btn.btn-style2:before{
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 10%;
+    background-color: whitesmoke;
+    width: 1%;
+    height: 1px;
+    transition:all 0.3s ease 0s;
+}
+
+.btn.btn-style2:after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    right: 10%;
+    background-color: whitesmoke;
+    width: 1%;
+    height: 1px;
+    transition:all 0.3s ease 0s;
+}
+
+.btn:hover:before,
+.btn:hover:after,
+.btn.active:before,
+.btn.active:after{
+    width: 80%;
+}
+
+.btn.btn-style2:hover{
+    background-position: left bottom;
+}
+
+.text:hover{
+    color: #222227;
+    background-position: right bottom;
+    font-weight: bold;
+}
+
+.text{
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    color: white;
+    transition: all .6s ease-out;
+    display: block;
+    background-position: left bottom;
+}
+
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
