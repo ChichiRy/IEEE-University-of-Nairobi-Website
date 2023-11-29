@@ -6,19 +6,14 @@ body{
 	align-items: center;
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
-}
-.bg-image{
-	background-image: url("../media/login_modal/IMG_4440.JPG");
-	filter: blur(10px);
-	--webkit-filter: blur(10px);
 	height: 100%;
-	background-position: 50% 100%;
-	background-repeat: no-repeat;
+	background: #0C356A url("../img/IMG_4440.JPG") no-repeat 65% 65%;
 	background-size: cover;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 }
-
 .main{
-	width: 350px;
+	width: 70%;
 	height: 500px;
 	background: red;
 	overflow: hidden;
@@ -45,19 +40,21 @@ label{
 	transition: .5s ease-in-out;
 }
 input{
-	width: 60%;
 	height: 20px;
 	background: #e0dede;
 	justify-content: center;
-	display: flex;
+	display: flow;
 	margin: 20px auto;
 	padding: 10px;
 	border: none;
 	outline: none;
 	border-radius: 5px;
 }
+.row{
+	justify-content: center;
+}
 button{
-	width: 60%;
+	width: 50%;
 	height: 40px;
 	margin: 10px auto;
 	justify-content: center;

@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
     'webpage',
     'payment_gateway',
     'django.contrib.admin',
@@ -56,7 +57,7 @@ ROOT_URLCONF = 'IEEE_UoN_Website.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['webpage/templates', 'payment_gateway/assets/templates'],
+        'DIRS': ['accounts/templates', 'webpage/templates', 'payment_gateway/assets/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -82,7 +83,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -101,6 +101,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'ieee.uon.auth@gmail.com'
+EMAIL_HOST_PASSWORD = 'mngvcssgzndfggmy'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'ieee.uon.sb.auth@gmail.com'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/

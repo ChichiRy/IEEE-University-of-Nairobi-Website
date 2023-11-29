@@ -1,6 +1,6 @@
-{#{% extends 'layout.html' %}#}
+<!--{#{% extends 'layout.html' %}#}
 
-{#{% load static %}#}
+{#{% load static %}#}-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,8 +42,6 @@
 
       <div id="logo">
         <a href="{% url 'webpage:index' %}"><img src="../static/media/img/portfolio/UON%20IEEE%20White.png" alt=""></a>
-        <!-- Uncomment below if you prefer to use a text logo -->
-{#        <h1><a href="{% url 'webpage:index' %}">Regna</a></h1>#}
       </div>
 
       <nav id="navbar" class="navbar">
@@ -51,7 +49,7 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#call-to-action">Team</a></li>
-            <li><a class="nav-link scrollto " href="#socials">Socials</a></li>
+            <li><a class="nav-link scrollto " href="#portfolio">Socials</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
             <li><a class="nav-link scrollto" href="#hero">Get Started</a></li>
         </ul>
@@ -65,7 +63,7 @@
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Welcome to IEEE</h1>
         <h2>University of Nairobi, Student Branch</h2>
-      <h3 class="header-h3">Here to make your student life a little more interesting...</h3>
+      <h3 class="header-h3 typing" data-aos-delay="150">Here to make your student life a little more interesting...</h3>
         <a href="#" class="btn btn-style2 text" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
         Get Started</a>
     </div>
@@ -85,7 +83,7 @@
                         </a>
                     </div>
                     <div class="col-md-6">
-                         <a href="{% url 'webpage:signup_login' %}">
+                         <a href="{% url 'accounts:login' %}">
                              <figure style="--c:#fff5">
                                 <img src="https://picsum.photos/id/475/250/300" alt="Mountains">
                                 <figcaption>Check this place out</figcaption>
@@ -94,7 +92,7 @@
                     </div>
                 </div>
             </div>
-        <div class="container" style="background-color:#f1f1f1">
+        <div class="container close-bkg">
           <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
         </div>
       </div>
@@ -108,27 +106,25 @@
         <div class="row about-container">
 
           <div class="col-lg-6 content order-lg-1 order-2">
-            <h2 class="title">Few Words About Us</h2>
+            <h2 class="title">A Few Words About Us</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              We are part of the world's largest professional body, comprising over 427,000 members across more than 190 countries.
+                <br>Featured in our student branch are:
             </p>
-
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="bi bi-briefcase"></i></div>
-              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+              <div class="icon"><i class="bi bi-people"></i></div>
+              <h4 class="title"><a href="">Professional Development</a></h4>
+              <p class="description">Get ready to meet professionals from all kinds of industries across Kenya and the world.</p>
             </div>
-
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="bi bi-card-checklist"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <div class="icon"><i class="bi bi-robot"></i></div>
+              <h4 class="title"><a href="">Technical Development</a></h4>
+              <p class="description">Join one of the most active societies at the University of Nairobi, and get the chance to grow and develop your technical skills.</p>
             </div>
-
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class="bi bi-binoculars"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <div class="icon"><i class="bi bi-person-raised-hand"></i></div>
+              <h4 class="title"><a href="">Personal Development</a></h4>
+              <p class="description">As you grow, we believe you should grow. Come experience the power of mentorship from professionals in the field and in life.</p>
             </div>
 
           </div>
@@ -330,7 +326,7 @@
     </section><!-- End Call To Action Section -->
 
        <!-- ======= Social Media Section ======= -->
-    <section id="socials" class="portfolio">
+    <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h3 class="section-title">Socials</h3>
@@ -349,101 +345,82 @@
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="../static/media/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="../static/media/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
+              <iframe src="https://ieee.org/" class="img-fluid"></iframe>
+                <div class="portfolio-info">
+                  <h4>IEEE.org</h4>
+                  <a href="https://ieee.org/" class="details-link" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="../static/media/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <iframe src="https://twitter.com/ieee_uonbi" class="img-fluid"></iframe>
             <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="../static/media/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>IEEE UoN Twitter</h4>
+              <a href="https://twitter.com/ieee_uonbi" target="_blank" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="../static/media/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+            <iframe src="https://ieeer8.org/" class="img-fluid"></iframe>
             <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="../static/media/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>IEEE Region 8</h4>
+              <a href="https://ieeer8.org/" class="details-link" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="../static/media/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <iframe src="https://ke.linkedin.com/company/ieeeuonbi" class="img-fluid"></iframe>
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <a href="../static/media/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>UoN SB LinkedIn</h4>
+              <a href="https://ke.linkedin.com/company/ieeeuonbi" target="_blank" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="../static/media/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <iframe src="https://twitter.com/IEEEorg" class="img-fluid"></iframe>
             <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="../static/media/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>IEEE Twitter</h4>
+              <a href="https://twitter.com/IEEEorg" target="_blank" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="../static/media/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <iframe src="https://www.ieeekenya.or.ke/" class="img-fluid"></iframe>
+                <div class="portfolio-info">
+                  <h4>IEEE Kenya</h4>
+                  <a href="https://www.ieeekenya.or.ke/" target="_blank" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <iframe src="https://ke.linkedin.com/company/ieee-wie-uon/" class="img-fluid"></iframe>
             <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="../static/media/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>WiE LinkedIn</h4>
+              <a href="https://ke.linkedin.com/company/ieee-wie-uon/" target="_blank" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="../static/media/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <iframe src="https://ke.linkedin.com/company/ieee-university-of-nairobi-robotics-and-automation-society/" class="img-fluid"></iframe>
             <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href="../static/media/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="../static/media/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <a href="../static/media/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>RAS LinkedIn</h4>
+              <a href="https://ke.linkedin.com/company/ieee-university-of-nairobi-robotics-and-automation-society/" class="details-link" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="../static/media/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <iframe src="" class="img-fluid"></iframe>
             <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
+              <h4>IEEE Region 8 Twitter</h4>
               <a href="../static/media/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="#" target="_blank" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
-
         </div>
 
       </div>
-    </section><!-- End Portfolio Section -->
+    </section><!-- End Links Section -->
 
 
     <!-- ======= Contact Section ======= -->
@@ -462,7 +439,7 @@
                 <div class="row align-items-center">
                     <div class="col">
                         <div>
-                            <p><iframe width="600" height="450" allowfullscreen="" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8243609161505!2d36.8174121!3d-1.2789525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f172ce7646fa3%3A0xb1e4c74a23e8ff21!2sAmerican%20Wing!5e0!3m2!1sen!2ske!4v1697378630196!5m2!1sen!2ske"></iframe></p>
+                            <p><iframe width="600" height="400" allowfullscreen="" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8243609161505!2d36.8174121!3d-1.2789525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f172ce7646fa3%3A0xb1e4c74a23e8ff21!2sAmerican%20Wing!5e0!3m2!1sen!2ske!4v1697378630196!5m2!1sen!2ske"></iframe></p>
                         </div>
                     </div>
                     <div class="col send_height">
@@ -511,13 +488,11 @@
   <footer id="footer">
     <div class="footer-top">
       <div class="container">
-
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Regna</strong>. All Rights Reserved
+          <div class="container">
+              <div class="copyright" style="height: 30px; margin-top: 1%;">
+                &copy; Copyright <strong>IEEE UoN SB</strong> 2023. All Rights Reserved
+              </div>
+          </div>
       </div>
     </div>
   </footer><!-- End Footer -->

@@ -11,8 +11,8 @@ def about(request):
     return render(request, 'about.html', {'navbar': 'about'})
 
 
-def admin(request):
-    return render(request, 'admin.html', {'navbar': 'admin'})
+# def admin(request):
+#     return render(request, 'admin.html', {'navbar': 'admin'})
 
 
 def blogs(request):

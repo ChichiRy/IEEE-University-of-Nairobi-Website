@@ -1,0 +1,8 @@
+{% autoescape off %}
+
+ Hello {{ name }}!!
+ Welcome to IEEE University of Nairobi Student Branch!
+ Before you go any further though, please verify your email address by clicking on the following link.
+ Confirmation Link: http://{{ domain }}{% url 'accounts:verify' uidb64=uid token=token %}
+
+ {% endautoescape %}

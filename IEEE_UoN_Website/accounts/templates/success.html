@@ -1,0 +1,22 @@
+#success.html
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <meta http-equiv="refresh" content="3; {% url 'webpage:signup_login' %}">
+
+    <div class="global-container">
+    <div class="card login-form">
+        <div class="card-body">
+            <h3 class="card-title text-center">
+                You have successfully registered as a user.
+            </h3>
+            <div class="card-text text-center">
+                Please Login
+                <a href="" class="btn btn-primary"></a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

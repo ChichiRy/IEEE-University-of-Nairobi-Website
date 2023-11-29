@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+    {% block linked_files %}
   <title>Inner Page - Delicious Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -26,23 +27,17 @@
 
   <!-- Template Main CSS File -->
   <link href="../static/css/inner_page/css/style.css" rel="stylesheet">
+    {% endblock %}
 
-  <!-- =======================================================
-  * Template Name: Delicious
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
-
+  {% block header %}
   <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-flex align-items-center fixed-top ">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-center justify-content-lg-start">
-      <i class="bi bi-phone d-flex align-items-center"><span>+1 5589 55488 55</span></i>
-      <i class="bi bi-clock ms-4 d-none d-lg-flex align-items-center"><span>Mon-Sat: 11:00 AM - 23:00 PM</span></i>
+      <i class="bi bi-phone d-flex align-items-center"><span>+254 724 741184</span></i>
+      <i class="bi bi-clock ms-4 d-none d-lg-flex align-items-center"><span>Mon-Fri: 09.00 - 15.00</span></i>
     </div>
   </section>
 
@@ -51,46 +46,31 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <div class="logo me-auto">
-        <h1><a href="index.html">Delicious</a></h1>
+        <h1><a href="index.html"><img src="../static/media/img/portfolio/UON%20IEEE%20White.png" alt="IEEE UoN SB logo"></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="../static/media/inner_page/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="#">Home</a></li>
-          <li><a class="nav-link scrollto" href="#">About</a></li>
-          <li><a class="nav-link scrollto" href="#">Menu</a></li>
-          <li><a class="nav-link scrollto" href="#">Specials</a></li>
-          <li><a class="nav-link scrollto" href="#">Events</a></li>
-          <li><a class="nav-link scrollto" href="#">Chefs</a></li>
-          <li><a class="nav-link scrollto" href="#">Gallery</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#">Contact</a></li>
+            <li class="nav-item {% if navbar == 'index' %} active {% endif %}"><a class="nav-link" href="{% url 'webpage:home_user' %}">Home</a></li>
+        <li class="nav-item {% if navbar == 'index' %} active {% endif %}"><a class="nav-link" href="{% url 'webpage:about' %}">About</a></li>
+        <li class="nav-item {% if navbar == 'index' %} active {% endif %}"><a class="nav-link" href="{% url 'webpage:about' %}">Events</a></li>
+        <li class="nav-item {% if navbar == 'index' %} active {% endif %}"><a class="nav-link" href="{% url 'webpage:blogs' %}">Blogs</a></li>
+        <li class="nav-item {% if navbar == 'index' %} active {% endif %}"><a class="nav-link" href="{% url 'webpage:gallery' %}">Gallery</a></li>
+        <li class="nav-item {% if navbar == 'index' %} active {% endif %}"><a class="nav-link" href="{% url 'webpage:contact' %}">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="#" class="book-a-table-btn scrollto">Book a table</a>
+
+      <a href="{% url 'webpage:home_user' %}" class="book-a-table-btn scrollto">Account</a>
 
     </div>
   </header><!-- End Header -->
+  {% endblock %}
+
+  {% block main %}
 
   <main id="main">
 
@@ -101,7 +81,7 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2>Inner Page</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="home_user.html">Home</a></li>
             <li>Inner Page</li>
           </ol>
         </div>
@@ -133,43 +113,44 @@
     </section>
 
   </main><!-- End #main -->
+  {% endblock %}
 
+  {% block footer %}
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
-      <h3>Delicious</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <h3>Check us out on ...</h3>
       <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="https://twitter.com/IEEE_UoNbi" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.facebook.com/IEEEUoNbi/" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/ieee_uonbi/" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://chat.whatsapp.com/Knyg7bUASTy3eWoCQa4Ey7" class="google-plus"><i class="bx bxl-whatsapp"></i></a>
         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <p><br>... for all your latest news, photos and contacts.</p>
       </div>
       <div class="copyright">
-        &copy; Copyright <strong><span>Delicious</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>IEEE UoN SB</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by Ryan Chironga
       </div>
     </div>
   </footer><!-- End Footer -->
+  {% endblock %}
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
-  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../static/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="../static/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="../static/vendor/php-email-form/validate.js"></script>
+    {% block linked_js %}
+    <!-- Vendor JS Files -->
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../static/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../static/vendor/php-email-form/validate.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="../static/js/inner_page/main.js"></script>
+    <!-- Template Main JS File -->
+    <script src="../static/js/inner_page/main.js"></script>
+    {% endblock %}
 
 </body>
 

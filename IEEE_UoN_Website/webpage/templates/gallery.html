@@ -1,38 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Highway Grid CSS Template</title>
-<!--
+{% extends 'inner_page.html' %}
 
-Highway Template
+{% block linked_files %}
+    <title>Gallery</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/gallery/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/gallery/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../static/css/gallery/fontAwesome.css">
+    <link rel="stylesheet" href="../static/css/gallery/light-box.css">
+    <link rel="stylesheet" href="../static/css/gallery/templatemo-style.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <script src="../static/js/gallery/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    {{ block.super }}
 
-https://templatemo.com/tm-520-highway
+{% endblock %}
 
--->
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="stylesheet" href="../static/css/gallery/bootstrap.min.css">
-        <link rel="stylesheet" href="../static/css/gallery/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="../static/css/gallery/fontAwesome.css">
-        <link rel="stylesheet" href="../static/css/gallery/light-box.css">
-        <link rel="stylesheet" href="../static/css/gallery/templatemo-style.css">
-
-        <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-        <script src="../static/js/gallery/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    </head>
-
-<body>
-
-    <nav>
-        <div class="logo">
-            <a href="{% url 'webpage:gallery' %}">High<em>way</em></a>
-        </div>
-    </nav>
-
+    {% block header %}{{ block.super }}{% endblock %}
+    {% block main %}
     <div id="video-container">
         <div class="video-overlay"></div>
         <div class="video-content">
@@ -198,18 +182,10 @@ https://templatemo.com/tm-520-highway
 
         </div>
     </div>
+    {% endblock %}
 
-
-    <footer>
-        <div class="container-fluid">
-            <div class="col-md-12">
-                <p>Copyright &copy; 2018 Company Name
-
-    | Designed by TemplateMo</p>
-            </div>
-        </div>
-    </footer>
-
+    {% block footer %}{{ block.super }}{% endblock %}
+    {% block linked_js %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../static/js/gallery/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
@@ -217,6 +193,5 @@ https://templatemo.com/tm-520-highway
 
     <script src="../static/js/gallery/plugins.js"></script>
     <script src="../static/js/gallery/main.js"></script>
-
-</body>
-</html>
+    {{ block.super }}
+    {% endblock %}
